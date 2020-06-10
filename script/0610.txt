@@ -1,0 +1,6 @@
+1. node js 를 설치하면 npm은 자동으로 import 돼있음
+2. npm은 node package manager의 약자로 걍 js로 쓸수있는 모든 패키지/라이브러리 매니저로 생각하면됨. 걍 얘 없음 암것도 못함
+3. npm 으로 express 설치하면 된다 express는 nodejs 전용 프레임워크
+4. package.json 파일 내 json 형식으로 express version 정보만 있어도 다른 로컬에서 npm install만 하면 바로 같은 워크스페이스 사용 가능
+5. babel은 js를 최신 js로 컴파일 해주는 프로그램인데..es6가 최신버전이니 예전  ver의 js로 작성한걸 최신 js로 변경해주는듯 
+=> 땡! 반대야 es6 ver js를 예전 버전의 js로 변환해주는 프로그램
