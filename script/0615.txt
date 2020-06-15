@@ -1,6 +1,22 @@
 morgan : 로그 남기는 middleware
-helmet : for secure !
+
+helmet : nodejs의 보안을 위한 미들웨어
+
 cookie-parser : 사용자가 보내는 cookie를 서버에서 이해하기 위한 것
+
 body-parser : body로 부터 object 빼어낼 때 쓰는 패키지
-ex ) form으로 data 전송할때 그안에 각각 object 사용해야 하잖아
-그때 쓰는 파싱 프로그램이 요놈
+ex ) form으로 data 전송하면 그안에 각각 object가 있고(json형식처럼)
+그 object를 빼서 써야할때 필요한 프로그램이 요놈
+
+es6 js : es6 js에는 모듈 기능이 있어서
+다른 파일의 있는 코드를 가져다 쓸 수 있다!
+-- 외부에서 사용하게 하려면 export 명령어 사용!
+
+express.Router() : 짱신기~
+do request, method get
+> 첫 관문은 app.js에서 설정(최초 컨트롤러 request mapping이랑 비슷)
+> 해당 route 타고 들어온 req에 대해 이동 경로별로 실행함수 분리
+= 컨트롤러 내 이동경로 별 requestmapping 설정, service-dao~~함수 내용 작성하는거랑 비슷
+= router.js 라는 파일을 따로 만들고 거기서 함수 내 세부로직 개발
+= app.js에선 router.js를 사용해야 하므로, router.js에서 export 명령어로 접근 가능한 라우터 앞에 적어주고
+app.js에선 import로 라우터끼리 매핑!
