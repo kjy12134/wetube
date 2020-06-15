@@ -1,0 +1,6 @@
+morgan : 로그 남기는 middleware
+helmet : for secure !
+cookie-parser : 사용자가 보내는 cookie를 서버에서 이해하기 위한 것
+body-parser : body로 부터 object 빼어낼 때 쓰는 패키지
+ex ) form으로 data 전송할때 그안에 각각 object 사용해야 하잖아
+그때 쓰는 파싱 프로그램이 요놈
