@@ -1,4 +1,4 @@
-import express, { Router } from "express";
+import express from "express";
 
 //module (not default)
 export const userRouter = express.Router();
