@@ -3,13 +3,13 @@ import morgan from "morgan"; // logger
 import helmet from "helmet"; // secure for nodeJs
 import cookieParser from "cookie-parser"; // parsing cookie for session
 import bodyParser from "body-parser"; // data-parsing from form object
-import { userRouter } from "./router"; // use another code, just object unit {}
-import { videoRouter } from "./router";
+import userRouter from "./routers/userRouter"; // use another code, just object unit {}
+import videoRouter from "./routers/videoRouter";
+import globalRouter from "./routers/globalRouter";
+import routes from "./routes";
+
 
 const app = express(); // get
-
-const handlehome = (req, res) => res.send('HELLO FROM HOME');
-const handleProfile = (req, res) => res.send('HELLO FROM PROFILE');
 
 
 // set middleware
@@ -21,10 +21,11 @@ app.use(morgan("dev"));
 
 
 // use route
-app.get("/", handlehome);
-app.get("/profile", handleProfile);
-app.use("/user", userRouter); // like request-mapping (in JAVA Spring)
-app.use("/video", videoRouter);
+// like request-mapping (in JAVA Spring)
+// url을 변수화해서 가져옴
+app.use("/", globalRouter);
+app.use(routes.users, userRouter); 
+app.use(routes.videos, videoRouter);
 
 // module
 // giving all settings to them who use this code-file
