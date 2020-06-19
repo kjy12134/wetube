@@ -14,6 +14,7 @@ F2. const abc = () => true;
 - MVC 중 VIEW에 해당되는 애!
 - js 내에서 html 태그를 사용할 수 있게 해준다~
 - JS 내 템플릿 언어이며 HTML 태그를 좀더 예쁘게 보여주는 언어ㅋ
+- 주의해야 할 점은 pug는 html 언어 사용이랑 조금 다름. 태그 열고 닫는걸 들여쓰기 기준으로 봄. 띄어쓰기 유념해야 함!
 - layouts main.pug를 만들었다!
 -> 똑같은 태그를 복붙하면서 화면을 만들 필요없이 main.pug의 body 태그 부분에 화면별로
 바뀌는 부분에 대해서만 따로 pug 파일로 만들어서 작성 => main.pug를 공통 레이아웃처럼 사용!
@@ -21,3 +22,4 @@ F2. const abc = () => true;
 (2) 각 여러 화면 템플릿 pug에서 
     1. extends layouts/main 입력하고
     2. block content 입력 후 실제 body 태그 작성
+    
