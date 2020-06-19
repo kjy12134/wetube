@@ -1,0 +1,12 @@
+controller : router을 통해 request url에 따라 구현할 기능을 작성하는 로직 (java spring의 컨트롤러 생각해)
+arrow function
+a1. function abc () {  
+    return true;
+}
+
+a2. const abc = () => true;
+
+- 동일한 함수, =>는 함수 내용을 암시적으로 return하는
+기능을 갖고 있음. 따라서 return을 또 명시해주면 오류가나고
+arrow 뒤에 중괄호를 사용하면 암시적 리턴 기능을 잃으므로
+그땐 괄호 안에 return을 명시해줘야 한다.
