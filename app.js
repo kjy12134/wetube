@@ -11,7 +11,7 @@ import routes from "./routes";
 
 const app = express(); // get
 
-
+app.set("view engine", "pug"); // pug 설정, view 파일의 기본 경로는 /views
 // set middleware
 app.use(cookieParser());
 app.use(bodyParser.json());
