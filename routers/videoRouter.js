@@ -6,7 +6,7 @@ import { videos, videoDetail, editVideo, deleteVideo, upload } from "../controll
 const videoRouter = express.Router();
 
 // controller 별 세부 기능 requestmapping
-videoRouter.get(routes.videos, videos);
+//videoRouter.get(routes.videos, videos);
 videoRouter.get(routes.videoDetail, videoDetail);
 videoRouter.get(routes.editVideo, editVideo);
 videoRouter.get(routes.deleteVideo,deleteVideo);

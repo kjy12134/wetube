@@ -23,7 +23,7 @@ app.use(morgan("dev"));
 // use route
 // like request-mapping (in JAVA Spring)
 // url을 변수화해서 가져옴
-app.use("/", globalRouter);
+app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter); 
 app.use(routes.videos, videoRouter);
 
