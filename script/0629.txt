@@ -1,0 +1,26 @@
+1. app.js에 local middleware를 선언해서 전역 변수 사용 가능
+-> 짱 신 기 해
+- 매개변수는 (res, req, next)
+- 변수 선언 끝나고 next(); 필수
+    : connection과 라우터 중간에 선언되는 미들웨어여서 
+    작업 끝나고 다음 라우터로 넘기기 위해서 사용
+- res.locals.변수명 = String value;
+    - pug 내에선 #{변수명}
+- json 형식은 그냥 가져다 써
+- https://expressjs.com/ko/4x/api.html#res  (API 문서 참조)
+
+2. controller 에서 pug로 view render 할때 
+해당 pug에 사용할 변수도 같이 (ModelAndView 느낌) return 할수있따
+res.render("pug name", { key : "value"});
+
+3. 일단 순서 mvc 모델링 순서..
+1. app.js 에서.. connection 미들웨어 셋팅
+ - helmet, morgan, cookie-parser, body-parser 등..
+2. 라우터 생성(app.use(routes, Router()))
+ - routes.js에서 경로 프라퍼티 파일 작성
+3. 라우터 별 controller 생성
+ - express.Router();
+ - router.get(router, Controller());
+4. 컨트롤러 별 response로 rendering 할 view 생성 (pug)
+ - function 사용
+ - (req, res) => {res.render(view명, {view에 같이 보낼 model(key-value)})};

@@ -2,7 +2,8 @@ morgan : 로그 남기는 middleware
 
 helmet : nodejs의 보안을 위한 미들웨어
 
-cookie-parser : 사용자가 보내는 cookie를 서버에서 이해하기 위한 것
+cookie-parser : 사용자가 보내는 cookie를 서버에서 이해하기 위한,
+즉 parsing 하기 위한 함수
 
 body-parser : body로 부터 object 빼어낼 때 쓰는 패키지
 ex ) form으로 data 전송하면 그안에 각각 object가 있고(json형식처럼)
