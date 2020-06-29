@@ -1,0 +1,2 @@
+- header 와 footer pug를 나눠서 main에 include
+- pug 소스 내 js 쓰고싶으면 #{js작성} 하면됨
