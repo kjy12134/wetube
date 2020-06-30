@@ -1,7 +1,16 @@
 export const home = (req, res)   => 
 res.render("home", { pageTitle : 'Home', potato : 1234});
-export const search = (req, res) => 
-res.render("search", { pageTitle : 'Search'});
+
+
+export const search = (req, res) => {
+    //const searchingBy = req.query.term;
+    // es6
+    const {
+        query : { term : searchingBy }
+    } = req;
+    res.render("search", { pageTitle : 'Search', searchingBy});
+};
+
 export const upload = (req, res) => 
 res.render("upload", { pageTitle : 'Upload'});
 

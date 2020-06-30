@@ -7,8 +7,9 @@ const userRouter = express.Router();
 
 // controller 별 세부 기능 requestmapping
 //userRouter.get("/", users);
-userRouter.get(routes.userDetail, userDetail);
 userRouter.get(routes.editProfile, editProfile);
 userRouter.get(routes.changePwd, changePwd);
+userRouter.get(routes.userDetail, userDetail);
+
 
 export default userRouter;
